@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <div class="aaa-header navbar navbar-default" role="navigation">
+  <!-- <div class="aaa-header navbar navbar-default" role="navigation">
     <div class="aaa-header-container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -73,7 +73,7 @@
               <li class="col-md-4">Widget
               </li>
             </ul>
-          </li>
+          </li> -->
           <!-- <li>
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu 1 <b class="caret"></b></a>
             <ul class="dropdown-menu multi-level">
@@ -106,13 +106,128 @@
         </ul>
       </div>
       <!--/.nav-collapse -->
+    <!-- </div>
+  </div>
+</div> -->
+
+<!--/*
+
+    Global Header Component
+    --------------------------------------------------
+
+    There will be one global header for all pages across AAA site, regardless of the club/region.
+    Logo will be regional based on the region/club.
+
+*/-->
+
+<!-- Sightly global objects declaration
+============================================= -->
+<sly data-sly-use.searchPage="${'com.aaa.ace.sightly.providers.PathBrowserPropertyProvider'
+        @ link = currentStyle.searchPagePath}" />
+<!-- #sightly-global-objects-declaration end -->
+
+<!-- Global Hader component
+============================================= -->
+
+<div class="aaa-header navbar navbar-default" role="navigation">
+  <div class="aaa-header-container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>MENU
+        </button>
     </div>
+    <a class="navbar-brand" href="#">
+      <img src="/content/dam/aaa-ne-web/Images/LogosIcons/aaa-logo.png">
+    </a>
+    <div class="nav-buttons">
+      <a href="https://www.southernnewengland.aaa.com/membership/profile/sign-in" class="btn btn-primary aaa-header-sign-in">SIGN IN</a>
+      <a href="https://www.southernnewengland.aaa.com/membership/join-new" class="btn btn-primary aaa-header-join hidden-xs">JOIN AAA</a>
+    </div>
+    <div class="clearfix"></div>
+    <div class="collapse navbar-collapse">
+      <div class="collapsed-menu">
+        <h1 class="collapsed-menu-title">Menu</h1>
+        <img class="collapsed-menu-close" id="d-close-searchbar" src="/content/dam/aaa-ne-web/Images/LogosIcons/icon-white-x.svg">
+      </div>
+      <ul class="nav navbar-nav aaa-header-tabs">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Membership</a></li>
+        <li><a href="#">Travel</a></li>
+        <li><a href="#">Insurance</a></li>
+        <li><a href="#">Discounts</a></li>
+        <li><a href="#">Auto</a></li>
+        <li><a href="#">Financial Services</a></li>
+        <li><a href="#">Community</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right aaa-header-links">
+        <li>
+          <img class="hidden-sm hidden-xs" src="/content/dam/aaa-ne-web/Images/LogosIcons/icon-roadside.svg">
+          <a href="https://ww1.aaa.com/services/automotive/rso/rsoHome.html?dt=1378764235571&association=AAA&club=240" target="_blank">Roadside Assistance</a>
+          <span class="hidden-sm hidden-xs"> | </span>
+        </li>
+        <li>
+          <img class="hidden-sm hidden-xs" src="/content/dam/aaa-ne-web/Images/LogosIcons/icon-find-branch.svg">
+          <a href="https://www.southernnewengland.aaa.com/locations" target="_blank">Find a Branch</a>
+          <span class="hidden-sm hidden-xs"> | </span>
+        </li>
+        <li class="search-link">
+          <img class="hidden-sm hidden-xs" src="/content/dam/aaa-ne-web/Images/LogosIcons/icon-search.svg">
+          <a href="#">${currentStyle.searchLabel}</a>
+        </li>
+        <li class="searchbar hidden-sm hidden-xs">
+          <form action="${searchPage.linkURL @ context='uri'}" role="search">
+            <div class="input-group search-bar">
+              <span class="input-group-addon">
+                  <i class="glyphicon glyphicon-search" id="search-icon" aria-hidden="true"></i>
+                </span>
+
+              <input type="search" name="q" id="q" placeholder="${currentStyle.searchPlaceholderLabel}" class="form-control font-h" />
+
+              <span class="input-group-addon">
+                  <img id="d-close-searchbar" src="/content/dam/aaa-ne-web/Images/LogosIcons/icon-close.svg">
+                </span>
+            </div>
+          </form>
+        </li>
+      </ul>
+      <div class="searchbar-mobile">
+        <div class="mobile-search-link">
+          <i class="glyphicon glyphicon-search" aria-hidden="true"></i>
+          <a href="#">Search</a>
+        </div>
+        <div class="mobile-search-form">
+          <form action="${searchPage.linkURL @ context='uri'}" role="search">
+            <div class="input-group search-bar">
+              <span class="input-group-addon">
+                  <i class="glyphicon glyphicon-search" aria-hidden="true"></i>
+                </span>
+
+              <input type="search" name="q" id="q" placeholder="${currentStyle.searchPlaceholderLabel}" class="form-control font-h" />
+
+              <span class="input-group-addon search-mobile-close">CLOSE</span>
+            </div>
+          </form>
+        </div>
+        <ul class="mobile-search-links">
+          <h2>Suggested</h2>
+          <li><a href="#" target="_blank">Contact Us</a></li>
+          <li><a href="#" target="_blank">AAA Branch Locations</a></li>
+          <li><a href="#" target="_blank">Join AAA</a></li>
+          <li><a href="#" target="_blank">Pay My Bill</a></li>
+          <li><a href="#" target="_blank">FAQ</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <!--/.nav-collapse -->
   </div>
 </div>
+<!-- #global-header-component end -->
+
 
   <div class="container" style="padding-top:50px;">
     <div class="navbar-template text-center">
-      <h1>Bootstrap NavBar</h1>
+      <h1>AAA Northeast Navigation</h1>
     </div>
   </div>
 
