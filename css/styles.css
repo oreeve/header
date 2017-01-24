@@ -51,6 +51,25 @@
   display: block;
 }
 
+.link-column {
+  width: 14%;
+}
+
+.widget-column {
+  width: 30%;
+  border-left: 1px solid #ececec;
+}
+.phone-banner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  background-color: #f6f6f6;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
 @media (min-width: 768px) {
   .nav {
     margin-bottom: 0;
@@ -84,12 +103,15 @@
   .nav>li.dropdown.open>.dropdown-menu {
     display: table;
     width: 100%;
+    height: 400px;
     text-align: center;
     left: 0;
     right: 0;
+    box-shadow: 0 8px 6px 1px rgba(0, 0, 0, 0.2);
   }
   .dropdown-menu>li {
     display: table-cell;
+    padding-top: 40px;
   }
   .aaa-header a.nav-link {
     color: #777;
@@ -98,7 +120,7 @@
 
 
 /* From AEM Component */
-
+/*
 
 .aaa-header {
   background-color: #003665;
@@ -224,24 +246,20 @@
 }
 
 .aaa-header .searchbar input::-webkit-input-placeholder {
-  /* WebKit, Blink, Edge */
   color: #798881;
 }
 
 .aaa-header .searchbar input:-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
   color: #798881;
   opacity: 1;
 }
 
 .aaa-header .searchbar input::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
   color: #798881;
   opacity: 1;
 }
 
 .aaa-header .searchbar input:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
   color: #798881;
 }
 
@@ -318,7 +336,6 @@
   transition: height 0.01s;
 }
 
-/* Changes default Bootstrap collapse breakpoint */
 
 @media (max-width: 991px) {
   .navbar-header {
@@ -367,7 +384,6 @@
     display: block !important;
     background-color: #003665;
   }
-  /* end breakpoint change */
   .aaa-header .navbar-header {
     float: left;
   }
@@ -527,4 +543,4 @@
   .aaa-header .aaa-header-tabs>li>a, .aaa-header .aaa-header-links>li>a {
     padding: 0 10px 20px;
   }
-}
+}*/
